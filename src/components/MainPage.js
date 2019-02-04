@@ -8,7 +8,7 @@ class MainPage extends React.Component{
   render(){
     return (
       <div className='MainPage_conteiner'>
-        This is main page
+        This is main page!
         <br/>
 
         <NavLink to="/category" className="PageLink" activeClassName="ActivePageLink">
