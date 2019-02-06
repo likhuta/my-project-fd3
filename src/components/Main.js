@@ -1,13 +1,17 @@
 import React from 'react';
-import './MainPage.css';
+import './Main.css';
 import { NavLink } from 'react-router-dom';
 
 
-class MainPage extends React.Component{
+
+class Main extends React.Component{
+
+
+
 
   render(){
     return (
-      <div className='MainPage_conteiner'>
+      <div className='Main_conteiner'>
         This is main page!
         <br/>
 
@@ -44,4 +48,4 @@ class MainPage extends React.Component{
 
 }
 
-export default MainPage
+export default Main

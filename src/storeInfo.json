@@ -1,0 +1,10 @@
+
+{
+  "categories":{
+    "category1":   {"name":"product1","price":30},
+    "category2":   {"name":"product2","price":40}
+  
+  }
+
+}
+

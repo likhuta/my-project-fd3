@@ -6,7 +6,6 @@ import PagesRouter from './pages/PagesRouter';
 
 
 
-
 class App extends React.Component {
   render() {
     return (
