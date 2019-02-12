@@ -1,43 +1,38 @@
 
-import { combineReducers} from 'redux'
-import {SET_CATEGORY, AvailableCategory} from './action'
-let storeInfo= require('./storeInfo.json');
+import {combineReducers} from 'redux'
+import {SHOW_CATEGORY,SET_CATEGORY, Category } from './action'
 
-const{SHOW_ALL_PREVIEW}=AvailableCategory;
-/*
-function shopApp (state={},action){
-  return{
-    availableCategory:availableCategory(state.availableCategory, action),
-    categories:categories(state)
-  }
-}
-*/
-function availableCategory(state=SHOW_ALL_PREVIEW, action){
+const {CATEGORY_1} = Category;
+
+function checkCategory(state=CATEGORY_1, action){
   switch(action.type){
     case SET_CATEGORY:
-     return action.availableCategory
-    default:
-      return state
+    return action.category
+  default:
+  return state
+}
+}
+let aaa= {
+"categories":{
+  "CATEGORY_1":   {"name":"product1","price":30},
+  "CATEGORY_2":   {"name":"product2","price":40}
 
+}
+
+}
+
+function showCategory(state=aaa, action){
+  switch (action.type){
+    case SHOW_CATEGORY:
+    return {"name":"awdd","price":999999}
+    default:
+    return state
   }
 }
-let initialInfo=Object.keys(storeInfo);
 
-
-function categories(state=initialInfo){
-  switch (state.availableCategory){
-    case SHOW_ALL_PREVIEW:
-      return state
-    default:
-    return storeInfo[state.availableCategory]
-    /*
-    return storeInfo
-    */
-  }
-  }
-
-const shopApp =combineReducers({
-  availableCategory,
-  categories
+const shopApp=combineReducers({
+  checkCategory,
+  showCategory
 })
-export default shopApp;
+
+export default shopApp
