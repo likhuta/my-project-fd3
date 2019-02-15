@@ -18,7 +18,7 @@ class Category extends React.Component{
 
        </NavLink>
 
-        <span>
+        <span> <br/>
           Name product:  {this.props.showCategory.categories[this.props.checkCategory].name}
         </span> <br/>
         <span>
@@ -40,6 +40,7 @@ const mapStateToProps = function (state) {
     // данному компоненту как this.props.counters
     showCategory: state.showCategory,
     checkCategory: state.checkCategory,
+    testJSON:state.testJSON
 
   };
 };

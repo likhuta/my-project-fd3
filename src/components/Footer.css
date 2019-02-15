@@ -1,0 +1,13 @@
+@import '~antd/dist/antd.css';
+
+.App {
+  text-align: center;
+}
+
+
+
+
+.Footer_conteiner{
+  background-color: darkgray;
+  min-height: 50px;
+}

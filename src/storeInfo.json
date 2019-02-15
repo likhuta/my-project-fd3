@@ -1,8 +1,8 @@
 
 {
   "categories":{
-    "category1":   {"name":"product1","price":30},
-    "category2":   {"name":"product2","price":40}
+    "CATEGORY_1":   {"name":"product1","price":30},
+    "CATEGORY_2":   {"name":"product2","price":40}
   
   }
 

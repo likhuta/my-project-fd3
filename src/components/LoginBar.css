@@ -1,0 +1,5 @@
+.LoginBar_conteiner{
+  display: inline;
+  border: solid 2px black;
+  float: right;
+}

@@ -3,10 +3,7 @@ import './Main.css';
 import { NavLink } from 'react-router-dom';
 
 import {connect} from 'react-redux';
-import { setCategory  } from '../action'
-
-import {testMy} from  '../action'
-//  let aaa=testMy();
+import { setCategory , fetchGetJSON } from '../action'
 
 class Main extends React.Component{
 
@@ -55,6 +52,10 @@ const mapDispatchToProps = (dispatch) => {
     console.log('from mapDispatchToProps' + category)
 
  dispatch(setCategory(category))
+ dispatch(fetchGetJSON())
+
+
+
   }
   }
   }

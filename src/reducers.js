@@ -1,8 +1,11 @@
 
 import {combineReducers} from 'redux'
-import {SHOW_CATEGORY,SET_CATEGORY, Category } from './action'
+import {SHOW_CATEGORY,SET_CATEGORY, SET_JSON,  Category } from './action'
+
 
 const {CATEGORY_1} = Category;
+
+
 
 function checkCategory(state=CATEGORY_1, action){
   switch(action.type){
@@ -12,6 +15,7 @@ function checkCategory(state=CATEGORY_1, action){
   return state
 }
 }
+
 let aaa= {
 "categories":{
   "CATEGORY_1":   {"name":"product1","price":30},
@@ -20,6 +24,7 @@ let aaa= {
 }
 
 }
+
 
 function showCategory(state=aaa, action){
   switch (action.type){
@@ -30,9 +35,24 @@ function showCategory(state=aaa, action){
   }
 }
 
+function testJSON(state={}, action){
+  switch (action.type){
+    case SET_JSON:
+    return action.json
+    default:
+    return {"name":"default","price":999999}
+  }
+
+}
+
+
+
+
+
 const shopApp=combineReducers({
   checkCategory,
-  showCategory
+  showCategory,
+  testJSON
 })
 
 export default shopApp
