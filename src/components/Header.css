@@ -1,7 +1,10 @@
 .Header_conteiner{
   background-color: gold;
   border: 2px solid silver;
-  padding: 20px
+  padding: 20px;
+  height: 15vh;
+
+
 }
 .title_name{
   font-size: 20px;

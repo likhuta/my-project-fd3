@@ -1,0 +1,11 @@
+.CategoriesLine{
+  display: inline-block;
+  padding: 0px;
+  width: calc((100vw -10px) / 7.2);
+  text-align: center;
+  border: 1px solid  gray;
+  box-sizing: border-box;
+}
+.CategoriesLine img{
+  padding-left: 3px;
+}

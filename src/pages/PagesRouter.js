@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Route } from 'react-router-dom';
+import './PagesRouter.css';
+
 
 import PageMain from './PageMain';
 import PageCategory from './PageCategory';
@@ -16,7 +18,7 @@ class PagesRouter extends React.Component {
   render() {
 
     return (
-      <div>
+      <div className='PagesRouter_conteiner'>
         <Route path="/" exact component={PageMain  } />
 
         <Route path="/categories" component={PageCategory} />
