@@ -2,7 +2,6 @@ import React from 'react';
 import './Footer.css';
 import { Button , Icon} from 'antd';
 
-import { NavLink } from 'react-router-dom';
 
 
 class Footer extends React.Component{

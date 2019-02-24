@@ -1,6 +1,5 @@
 import React from 'react';
 import './LoginBar.css';
-import { NavLink } from 'react-router-dom';
 
 
 let LoginBar =(props)=>{

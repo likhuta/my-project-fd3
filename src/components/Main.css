@@ -1,4 +1,39 @@
 .Main_conteiner{
-  background-color: lightgray;
-  height: 70vh;
+
 }
+
+.Main__FlexContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+
+
+.Main__FlexContainer__News div{
+  border: 1px solid blue;
+  max-height: 35vh;
+  max-width: 35vh;
+  min-width: 15vh;
+  min-height: 15vh;
+  height: 30vw;
+  width: 30vw;
+  margin: 2% 0px;
+  font-size: 16px;
+  font-weight: bold;
+  color:black;
+
+
+}
+
+.Main__FlexContainer__News{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 1px solid green;
+  width: 100%;
+  justify-content: space-around;
+
+}
+
+

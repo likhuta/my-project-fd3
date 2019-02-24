@@ -1,8 +1,8 @@
 .Header_conteiner{
   background-color: gold;
-  border: 2px solid silver;
-  padding: 20px;
-  height: 15vh;
+  border: 1px solid silver;
+  min-height: 15vh;
+  box-sizing: border-box;
 
 
 }

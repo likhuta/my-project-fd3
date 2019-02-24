@@ -1,6 +1,5 @@
 import React from 'react';
 import './FindBar.css';
-import { NavLink } from 'react-router-dom';
 
 
 let FindBar =(props)=>{

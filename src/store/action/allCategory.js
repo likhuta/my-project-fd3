@@ -1,4 +1,36 @@
-  import fetch from 'isomorphic-fetch'
+  import {
+    FETCH_ALL_CATEGORY,
+    CHECK_CATEGORY,
+    CHOOSE_PRODUCT
+  } from './actionTypes'
+ 
+
+export function allCategoryReducer () {
+  return{
+    type:FETCH_ALL_CATEGORY
+  }
+}
+
+export function checkCategory (name) {
+  return{
+    type:CHECK_CATEGORY, name
+  }
+}
+
+export function activeProductId (productId) {
+  return{
+    type:CHOOSE_PRODUCT, productId
+  }
+}
+
+
+
+
+
+
+ /*
+ 
+ import fetch from 'isomorphic-fetch'
   
   
   // name type action
@@ -78,8 +110,8 @@
       console.log('error', error)
     })
   }
-*/
+
 
 
   
-
+*/

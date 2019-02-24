@@ -1,9 +1,16 @@
 import React from 'react';
 import './Header.css';
-import { NavLink } from 'react-router-dom';
 import FindBar from './FindBar'
 import LoginBar from './LoginBar'
+import HeaderCategory from './HeaderCategory'
 
+
+
+let totalCategories=[
+  {name:'Электроника', id: 1},  {name:'Компьютеры', id: 2}, {name:'Стройка и ремонт', id: 3},
+  {name:'Дом и сад', id: 4}, {name:'Авто', id: 5}, {name:'Спорт', id: 6}, 
+
+]
 
 class Header extends React.Component{
 
@@ -21,6 +28,9 @@ class Header extends React.Component{
         <span className='title_name'>Upliner</span>
         <FindBar/>
         <LoginBar/>
+        <br/>
+        <HeaderCategory categories={totalCategories}/>
+
       </div>
     )
   }
