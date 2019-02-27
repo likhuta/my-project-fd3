@@ -17,21 +17,6 @@ let BlockNews =(props)=>{
 
   )
 }
-/*
-const mapDispatchToProps = (dispatch) => {
 
-  return {
-  test: (category) => {
-    console.log('from mapDispatchToProps' + category)
-
- dispatch(setCategory(category))
- dispatch(fetchGetJSON())
-
-
-
-  }
-  }
-  }
-*/
 export default  BlockNews
 

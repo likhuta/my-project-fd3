@@ -6,8 +6,11 @@ import './ActiveProduct.css';
 let ActiveProduct=(props)=>{
   console.log(props)
 
-  let activeProduct=props.allCategory.category[props.productInfo.name].products.filter(item=>item.id===+props.productInfo.id)[0];
-  console.log(activeProduct)
+  let activeProduct=props.dataShop.dataShop.category[props.productInfo.name].products
+  .filter(item=>item.id===+props.productInfo.id)[0];
+ // console.log(props.productInfo.name)
+ // console.log(props.allCategory.category[props.productInfo.name].products)
+ // console.log(props.dataFromFirebase.dataFromFirebase.category[props.productInfo.name].products.filter(item=>item.id===+props.productInfo.id)[0])
 
   return(
     <div className='ActiveProduct_conteiner'>
@@ -24,9 +27,10 @@ let ActiveProduct=(props)=>{
 }
 function mapStateToProps(state) {
   return {
-    allCategory:state.category,
-    checkCategoryName:state.checkCategoryName,
-    activeProductId:state.activeProductId,
+    chooseUser:state.chooseUser,
+   // checkCategoryName:state.checkCategoryName,
+   //activeProductId:state.activeProductId,
+   dataShop:state.dataShop
 
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 import FindBar from './FindBar'
-import LoginBar from './LoginBar'
+
 import HeaderCategory from './HeaderCategory'
 
 
@@ -27,7 +27,7 @@ class Header extends React.Component{
         <br/>
         <span className='title_name'>Upliner</span>
         <FindBar/>
-        <LoginBar/>
+     
         <br/>
         <HeaderCategory categories={totalCategories}/>
 

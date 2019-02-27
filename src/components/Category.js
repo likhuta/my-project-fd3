@@ -10,12 +10,15 @@ import {activeProductId} from '../store/action/allCategory'
 class Category extends React.Component{
   state={
     checkCategoryName:this.props.match.params.name,
+    // или брать из редакса? нужно ли это там?
   }
 
- arrAnswers=this.props.allCategory.category[this.props.checkCategoryName.checkCategoryName].products.map((item, index)=> 
+ arrAnswers=this.props.dataShop.dataShop.category[this.state.checkCategoryName].products.map((item, index)=> 
   <ListProduct item={item} key={index} 
-   checkCategoryName={this.props.checkCategoryName} onActiveProductId={this.props.activeProductId}
+   checkCategoryName={this.state.checkCategoryName} onActiveProductId={this.props.activeProductId}
   /> )
+
+
   render(){
    console.log('Category from', this.props)
     return (
@@ -44,8 +47,9 @@ const mapDispatchToProps = (dispatch) => {
 
 function mapStateToProps(state) {
   return {
-    allCategory:state.category,
-    checkCategoryName:state.checkCategoryName,
+    chooseUser:state.chooseUser,
+   // checkCategoryName:state.checkCategoryName,
+   dataShop:state.dataShop
   }
 }
 

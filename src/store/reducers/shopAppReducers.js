@@ -1,13 +1,15 @@
 
 import {combineReducers} from 'redux'
-import {getAllCategoryReducer, checkCategory, activeProductId} from './allCateory'
+import {getAllCategoryReducer} from './allCateory'
+import {getAxiosInfo} from './shopInfo'
+import {getStateApp} from './stateApp'
 
 
 
 const shopApp=combineReducers({
- category:getAllCategoryReducer,
- checkCategoryName:checkCategory,
- activeProductId:activeProductId,
+  chooseUser:getAllCategoryReducer,
+  dataShop:getAxiosInfo,
+  stateApp:getStateApp,
 })
 
 export default shopApp

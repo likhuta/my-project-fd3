@@ -8,8 +8,10 @@ import {connect} from 'react-redux';
 
 class CardProduct extends React.Component{
 
+ 
+
   render(){
-  //  console.log('CardProduct_conteiner', this.props)
+  // console.log('CardProduct_conteiner', this.props)
     return (
       <div className='CardProduct_conteiner'>
         <ActiveProduct productInfo={this.props.match.params} />
@@ -30,8 +32,8 @@ class CardProduct extends React.Component{
 
 function mapStateToProps(state) {
   return {
-    allCategory:state.category,
-    checkCategoryName:state.checkCategoryName
+    chooseUser:state.chooseUser,
+   // checkCategoryName:state.checkCategoryName
 
   }
 }

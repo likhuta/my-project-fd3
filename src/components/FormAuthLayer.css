@@ -1,0 +1,33 @@
+
+.FormAuthLayer {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 80%;
+  max-width: 240px;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  background: rgba(212, 22, 197, 0.8);
+  transform: translateX(0px);
+  transition: transform   .22s ease-in;
+
+  z-index: 90;
+  opacity: 0.9;
+}
+
+.FormAuthLayer.close {
+  transform: translateX(240px);
+}
+
+.FormAuthLayer .add_user{
+  color: black;
+ 
+  padding: 0 2px;
+  
+}
+
+.FormAuthLayer .add_user:hover{
+  color: magenta;
+  
+}

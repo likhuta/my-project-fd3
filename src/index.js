@@ -4,13 +4,19 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import { createStore, applyMiddleware} from 'redux'
+import { createStore,  applyMiddleware} from 'redux'
 import { Provider } from 'react-redux'
 import thunkMiddleware from 'redux-thunk'
 import { BrowserRouter } from 'react-router-dom';
 import shopApp from './store/reducers/shopAppReducers'
 
-let store = createStore(shopApp, applyMiddleware(thunkMiddleware))
+
+
+
+let store = createStore(shopApp,
+   applyMiddleware(thunkMiddleware)
+  )
+
 
 const  app= (
   <Provider  store={store} >

@@ -7,14 +7,20 @@ class PersonalCabinet extends React.Component{
 
   render(){
     return (
-      <div className='PersonalCabinet_conteiner'>
-        This ispersonal cabinet
-        <input  type='button' value='Basket'/>  <br/>       
-        <input  type='button' value='Personal info'/>  <br/>
+      <div className='PersonalCabinet'>
+        
 
         <NavLink to="/" exact className="PageLink" activeClassName="ActivePageLink">
-           To main page
+           <input type='button' value='To main page' />
         </NavLink>
+
+        <div className='imgProfile'>
+<h3> IMG</h3>
+        </div>
+        <div className='imgProfile'>
+<h3> PRODUCT</h3>
+        </div>
+        
       </div>
     )
   }

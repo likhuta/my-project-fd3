@@ -1,5 +1,18 @@
-.PersonalCabinet_conteiner{
-  background-color: aqua;
-  height: 100px;
-  width: 200px;
+.PersonalCabinet{
+  background-color: lightseagreen;
+  height: 65vh;
+  color:black;
+
+}
+
+.PersonalCabinet a{
+  color:black
+}
+.PersonalCabinet .imgProfile{
+  border: 1px solid black;
+  display: inline-block;
+  padding: 0px 15px;
+  height: 170px;
+  width: 150px;
+  
 }

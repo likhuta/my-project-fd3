@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
 
 import './App.css';
 import Header from './components/Header';
@@ -11,7 +11,10 @@ import Category from './components/Category';
 import Contact from './components/Contact';
 import PersonalCabinet from './components/PersonalCabinet';
 import CardProduct from './components/CardProduct';
-
+import fetch from 'isomorphic-fetch'
+import Loader from './components/Loader'
+import {connect} from 'react-redux';
+import {getAxiosInfo} from './store/action/shopInfo'
 
 let routes=(
   <Switch>
@@ -25,17 +28,34 @@ let routes=(
 
 )
 class App extends React.Component {
+  componentDidMount(){
+    console.log('APP')
+    this.props.getAxiosInfo()
+  }
+
   render() {
     return (
    <Layout>
         <Header />
-        {routes}
+      {  (this.props.dataShop.isLoading)
+       ? <Loader/>
+       : routes }
         <Footer />
    </Layout>
-      
-    
     );
   }
 }
 
-export default App;
+function mapStateToProps(state) {
+  return {
+   dataShop:state.dataShop
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+  getAxiosInfo:()=>dispatch(getAxiosInfo())
+  }
+}
+
+export default withRouter (connect (mapStateToProps,mapDispatchToProps ) (App));
