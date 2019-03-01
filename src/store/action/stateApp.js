@@ -1,5 +1,7 @@
 import {
-  IS_LOGIN
+  IS_LOGIN,
+  ADD_USER,
+  ACTIVE_USER
 } from './actionTypes'
 
 
@@ -7,9 +9,18 @@ import {
 
 
 export function isLogin (status) {
-  console.log('IS_LOGIN')
   return{
     type:IS_LOGIN, status 
   }
 }
 
+export function addUser (login,password) {
+  return{
+    type:ADD_USER, login,password 
+  }
+}
+export function activeUser (activeUser) {
+  return{
+    type:ACTIVE_USER, activeUser
+  }
+}

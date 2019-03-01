@@ -6,44 +6,40 @@ import {isLogin} from '../../store/action/stateApp'
 
 class Layout extends Component {
   state = {
-    menu: false,
-    newUser:false,
+    showForm: false,
     loginStatus:false,
   }
 
   toggleFormHandler=()=>{
     this.setState({
-      menu: !this.state.menu
+      showForm: !this.state.showForm
     })
   }
 
   formCloseHandler = () => {
     this.setState({
-      menu: false
+      showForm: false
     })
   }
-  toggleRegistrUser=()=>{
-    this.setState({
-      newUser:!this.state.newUser,
-    })
-  }
+
   toggleLoginStatus=()=>{
     this.setState({
       loginStatus:!this.state.loginStatus,
     }, ()=>this.props.isLogin(this.state.loginStatus) )
-    
+    //возможно  убрать isLogin
   }
   render() {
-   console.log('Layout---', this.props)
+ //  console.log('Layout---', this.props)
+ 
 
     return (
       <React.Fragment>
-      <FormAuthLayer  onClose={this.formCloseHandler} isOpen={this.state.menu} 
-        newUser={this.state.newUser} onToggleRegistrUser={this.toggleRegistrUser}
-        onToggleLoginStatus={this.toggleLoginStatus}  loginStatus={this.state.loginStatus} />
+      
+      <FormAuthLayer  onClose={this.formCloseHandler} isOpen={this.state.showForm} 
+          onToggleLoginStatus={this.toggleLoginStatus}  loginStatus={this.state.loginStatus} />
 
-      <LoginBar onToggle={this.toggleFormHandler} isOpen={this.state.menu}
-         loginStatus={this.state.loginStatus} onToggleLoginStatus={this.toggleLoginStatus} />
+      <LoginBar onToggle={this.toggleFormHandler} isOpen={this.state.showForm}
+         loginStatus={this.state.loginStatus} onToggleLoginStatus={this.toggleLoginStatus} loginActiveUser={this.props.stateApp.activeUser.login} />
         <main>
           { this.props.children }
         </main>

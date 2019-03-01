@@ -1,8 +1,7 @@
-.ActiveProduct_conteiner{
-  background-color: rgba(86, 228, 86, 0.664);
-
+.ActiveProduct{
+  border: 1px solid lightgreen;
   min-width: 100px;
-  min-height: 100px;
   text-align: center;
   color: black;
+  display: inline-block;
 }

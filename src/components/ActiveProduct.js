@@ -6,35 +6,32 @@ import './ActiveProduct.css';
 let ActiveProduct=(props)=>{
   console.log(props)
 
-  let activeProduct=props.dataShop.dataShop.category[props.productInfo.name].products
+  let activeProduct=props.arrProductStore.category[props.productInfo.name].products
   .filter(item=>item.id===+props.productInfo.id)[0];
  // console.log(props.productInfo.name)
  // console.log(props.allCategory.category[props.productInfo.name].products)
  // console.log(props.dataFromFirebase.dataFromFirebase.category[props.productInfo.name].products.filter(item=>item.id===+props.productInfo.id)[0])
 
   return(
-    <div className='ActiveProduct_conteiner'>
-    Name: {activeProduct.name} <br/>
-    Price: {activeProduct.price} <br/>
-    Size: {activeProduct.size} <br/>
-    Is have: {activeProduct.isHave+''}
-   
+    <div className='ActiveProduct'>
+          <div >
+          Name: {activeProduct.name} <br/>
+          Price: {activeProduct.price} <br/>
+          Size: {activeProduct.size} <br/>
+          Is have: {activeProduct.isHave+''}
+    </div>
 
+    <div>
+        <input type='button' value='Добавить' />
+        <input type='number' min='0' max='100' step='1' placeholder='шт' />
+    </div>
 
     </div>
 
+
   )
 }
-function mapStateToProps(state) {
-  return {
-    chooseUser:state.chooseUser,
-   // checkCategoryName:state.checkCategoryName,
-   //activeProductId:state.activeProductId,
-   dataShop:state.dataShop
 
-  }
-}
-
-export default connect(mapStateToProps) (ActiveProduct)
+export default  ActiveProduct
 
 

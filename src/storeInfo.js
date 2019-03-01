@@ -70,9 +70,73 @@ export const  initState={
           size:'large',
           isHave:true,
         },
+        {
+          id:34,
+          name:'Product 34',
+          price:150,
+          size:'big',
+          isHave:false,
+        },
+        {
+          id:35,
+          name:'Product 35',
+          price:299,
+          size:'large',
+          isHave:true,
+        },
+        {
+          id:36,
+          name:'Product 36',
+          price:299,
+          size:'large',
+          isHave:true,
+        },
     
       ]
-    }
+    },
+    'house_gaden':{
+      name:'house&gaden',
+      id:4,
+      products:[
+        {
+          id:41,
+          name:'Product 41',
+          price:150,
+          size:'big',
+          isHave:true,
+        },
+      
+      ]
+    },
+    car:{
+      name:'car',
+      id:5,
+      products:[
+        {
+          id:51,
+          name:'Product 51',
+          price:150,
+          size:'big',
+          isHave:true,
+        },
+        
+      ]
+    },
+    sport:{
+      name:'sport',
+      id:6,
+      products:[
+        {
+          id:61,
+          name:'Product 61',
+          price:150,
+          size:'big',
+          isHave:true,
+        },
+       
+      ]
+    },
+
     
   },
   activeProductId:'',
@@ -98,5 +162,24 @@ export let blockNews=[
   category:'build',
   className:'Main__FlexContainer__News',
   id:3
+  },
+  {text:'Buy  house&gaden',
+  background:'lightsalmon',
+  category:'house&gaden',
+  className:'Main__FlexContainer__News',
+  id:4
+  },
+  {text:'Buy  car',
+  background:'palegreen',
+  category:'car',
+  className:'Main__FlexContainer__News',
+  id:5
+  },
+
+  {text:'Buy  sport',
+  background:'darkviolet',
+  category:'sport',
+  className:'Main__FlexContainer__News',
+  id:6
   },
 ]

@@ -1,10 +1,9 @@
 import React from 'react';
 import './Category.css';
-import { NavLink } from 'react-router-dom';
 import ListProduct from './ListProduct'
 import {connect} from 'react-redux';
 import {activeProductId} from '../store/action/allCategory' 
-
+import SearchField from './SearchField'
 
 
 class Category extends React.Component{
@@ -21,17 +20,19 @@ class Category extends React.Component{
 
   render(){
    console.log('Category from', this.props)
-    return (
-      <div className='Category_conteiner'>
+   console.log('Category from STATE', this.state.checkCategoryName)
 
-        <NavLink to="/product" className="PageLink" activeClassName="ActivePageLink">
-           <input type='button' value='show more info' /> <br/>
-        </NavLink>
-        <NavLink to="/" exact className="PageLink" activeClassName="ActivePageLink">
-           To main page
-        </NavLink>
-      
-        {this.arrAnswers}
+    return (
+      <div className='Category'>
+        <div className='filter_field'>
+          <SearchField />
+         
+
+        </div>
+        
+      <div className='block_product'>
+          {this.arrAnswers}
+      </div>
       </div>
     )
   }

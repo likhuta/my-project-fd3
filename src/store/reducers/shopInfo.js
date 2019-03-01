@@ -20,15 +20,17 @@ export const getAxiosInfo= (state=initialState, action)=> {
 
       return{
         ...state,
-        dataShop:action.dataShop
+        // dataShop:action.dataShop,
+        dataShop:{...initState},
       }
       
     case AXIOS_ERROR:
     return{
       ...state,
-      dataShop:{...initState},
-      blockNews:blockNews,
-     
+      // dataShop:{...initState},
+      // blockNews:blockNews,
+      dataShop:action.dataShop,
+     blockNews:action.blockNews,
     }
     case IS_LOADING_FALSE:
     return{
@@ -39,8 +41,8 @@ export const getAxiosInfo= (state=initialState, action)=> {
     case BLOCK_NEWS_SUCSSES:
     return{
       ...state,
-      blockNews:action.blockNews,
-    
+    //  blockNews:action.blockNews,
+     blockNews:blockNews,
     }
 
     default:

@@ -9,15 +9,14 @@
   padding: 20px 10px;
   box-sizing: border-box;
   background: rgba(212, 22, 197, 0.8);
-  transform: translateX(0px);
-  transition: transform   .22s ease-in;
+  transform: translateX(240px);
+  transition: transform   .18s ease-in;
 
   z-index: 90;
   opacity: 0.9;
 }
 
 .FormAuthLayer.close {
-  transform: translateX(240px);
 }
 
 .FormAuthLayer .add_user{
@@ -30,4 +29,12 @@
 .FormAuthLayer .add_user:hover{
   color: magenta;
   
+}
+.FormAuthLayer .alarm{
+  color: red;
+  
+}
+.FormAuthLayer.open {
+  transform: translateX(0px);
+
 }

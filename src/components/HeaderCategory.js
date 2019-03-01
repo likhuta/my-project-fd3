@@ -1,22 +1,28 @@
 import React from 'react';
 import './HeaderCategory.css';
+import { NavLink } from 'react-router-dom';
 
-class HeaderCategory extends React.Component{
-   result=this.props.categories.map( item=> {
+let HeaderCategory =(props)=>{
+  console.log(props)
+  
+  let result=props.categories.map( item=> {
     return(
-      <div className='HeaderCategory_Line' key={item.id} > {item.name}
-          <img src={ require ('../img/png/' + item.id+'.png')}   alt='png'/> 
-      </div>
+      <NavLink key={item.id}  to={'/category/'+item.category+'/'+item.id}  activeClassName="ActivePageLink">
+        <div className='HeaderCategory_Line'  > {item.name}
+            <img src={ require ('../img/png/' + item.id+'.png')}   alt='png'/> 
+        </div>
+
+      </NavLink>
     )
   })
-  render(){
+ 
 
     return (
       <div className='HeaderCategory_conteiner'>
-       {this.result}
+       {result}
       </div>
     )
-  }
+  
 
 }
 

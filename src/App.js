@@ -19,7 +19,7 @@ import {getAxiosInfo} from './store/action/shopInfo'
 let routes=(
   <Switch>
       <Route path="/" exact component={Main} />
-      <Route path="/category/:name/:id" component={Category } />
+      <Route path="/category/:name/:id"  component={Category } />
       <Route path="/product/:name/:id" component={CardProduct} />
       <Route path="/contact" component={Contact} />
       <Route path="/personalCabinet" component={PersonalCabinet} />

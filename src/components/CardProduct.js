@@ -13,13 +13,10 @@ class CardProduct extends React.Component{
   render(){
   // console.log('CardProduct_conteiner', this.props)
     return (
-      <div className='CardProduct_conteiner'>
-        <ActiveProduct productInfo={this.props.match.params} />
-        <br/>
-        <NavLink to="/" exact className="PageLink" activeClassName="ActivePageLink">
-           To main page <br/>
-        </NavLink>
-        <br/>
+      <div className='CardProduct'>
+
+        <ActiveProduct productInfo={this.props.match.params} arrProductStore={this.props.dataShop.dataShop} className='show_product' />
+       
         
 
       </div>
@@ -29,11 +26,11 @@ class CardProduct extends React.Component{
 }
 
 
-
 function mapStateToProps(state) {
   return {
-    chooseUser:state.chooseUser,
+  chooseUser:state.chooseUser,
    // checkCategoryName:state.checkCategoryName
+   dataShop:state.dataShop
 
   }
 }

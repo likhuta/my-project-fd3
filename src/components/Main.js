@@ -79,9 +79,7 @@ class Main extends React.Component{
   console.log('Main -',this.props)
     return (
       <div className='Main_conteiner'>
-          <NavLink to="/personalCabinet"  activeClassName="ActivePageLink">
-            <input  type='button' value='personal  cabinet'/>  
-          </NavLink>
+  
 
           <NavLink to="/contact"  activeClassName="ActivePageLink">
             <input  type='button' value='contact'/> 
