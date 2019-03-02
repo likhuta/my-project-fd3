@@ -5,10 +5,10 @@ class SearchField extends React.Component{
 
 render(){
   return(
-    <React.Fragment>
+    <div className='SearchField'>
       hello  SearchField
     
-    </React.Fragment>
+    </div>
   )
 }
 

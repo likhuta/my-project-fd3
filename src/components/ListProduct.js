@@ -4,15 +4,18 @@ import { NavLink } from 'react-router-dom';
 
 
  let ListProduct=(props)=>{
- // console.log('ListProduct', props)
+  console.log('ListProduct', props)
   return(
     <div className='ListProduct'>
     
       <NavLink to={"/product/"+props.checkCategoryName+'/'+props.item.id} 
            onClick={()=>props.onActiveProductId(props.item.id)}  >
-            name: {props.item.name}; price:{props.item.price} 
+             {props.item.name}; 
+            {/* price:{props.item.price}  */}
             <div className='img_product'>
               IMG
+              <img src={ require ('../img/product/id' + props.item.id+'.jpeg')}   alt='png'/> 
+
               </div>
      </NavLink>
 
@@ -22,7 +25,6 @@ import { NavLink } from 'react-router-dom';
      </div> */}
 
     </div>
-      
 
   )
 }

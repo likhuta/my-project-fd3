@@ -7,31 +7,25 @@ import SearchField from './SearchField'
 
 
 class Category extends React.Component{
-  state={
-    checkCategoryName:this.props.match.params.name,
-    // или брать из редакса? нужно ли это там?
-  }
-
- arrAnswers=this.props.dataShop.dataShop.category[this.state.checkCategoryName].products.map((item, index)=> 
-  <ListProduct item={item} key={index} 
-   checkCategoryName={this.state.checkCategoryName} onActiveProductId={this.props.activeProductId}
-  /> )
+ 
 
 
   render(){
-   console.log('Category from', this.props)
-   console.log('Category from STATE', this.state.checkCategoryName)
+  //  console.log('Category from', this.props)
 
+let arrAnswers=this.props.dataShop.dataShop.category[this.props.match.params.name].products.map((item, index)=> 
+  <ListProduct item={item} key={index} 
+  
+   checkCategoryName={this.props.match.params.name} onActiveProductId={this.props.activeProductId}
+  /> )
     return (
       <div className='Category'>
         <div className='filter_field'>
           <SearchField />
-         
-
         </div>
         
       <div className='block_product'>
-          {this.arrAnswers}
+          {arrAnswers}
       </div>
       </div>
     )

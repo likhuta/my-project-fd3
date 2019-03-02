@@ -29,7 +29,7 @@ class Layout extends Component {
     //возможно  убрать isLogin
   }
   render() {
- //  console.log('Layout---', this.props)
+  // console.log('Layout---', this.props)
  
 
     return (

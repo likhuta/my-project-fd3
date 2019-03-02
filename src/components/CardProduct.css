@@ -5,9 +5,9 @@
 
 }
 .CardProduct .show_product{
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content:space-evenly;
+  justify-content:space-evenly; */
 }
 

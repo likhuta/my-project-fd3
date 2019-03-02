@@ -6,11 +6,14 @@ import {
 } from '../action/actionTypes'
 
 const initialState = {
-isLogin:false,
+  // isLogin:false,
+isLogin:true,
 users:[
-  {login:123, password:123, bascetProduct: [{categoryId:1, productId:11}] }
+  {login:123, password:123,
+     bascetProduct: [{categoryName:'computers', productId:21}]}
 ],
-activeUser:{}
+activeUser:{login:123, password:123,
+   bascetProduct:[ {categoryName:'computers', productId:21}, {categoryName:'computers', productId:22} ]}
 
 }
 
@@ -25,7 +28,7 @@ case IS_LOGIN:
  case ADD_USER: 
  return{
    ...state,
-   users:[...state.users, {login:action.login, password:action.password,  bascetProduct: [{categoryId:'', productId:''}] } ]
+   users:[...state.users, {login:action.login, password:action.password,  bascetProduct: {categoryName:'', productId:''} } ]
   }
   case ACTIVE_USER: 
   return{
