@@ -15,7 +15,6 @@ import { NavLink } from 'react-router-dom';
             <div className='img_product'>
               IMG
               <img src={ require ('../img/product/id' + props.item.id+'.jpeg')}   alt='png'/> 
-
               </div>
      </NavLink>
 
