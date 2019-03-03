@@ -18,6 +18,6 @@
 .Category .filter_field{
 display: inline-block;
 height: 100%;
-border: 1px red solid;
+border: 2px red solid;
 width: 200px;
 }
