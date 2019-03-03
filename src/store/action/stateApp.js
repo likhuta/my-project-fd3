@@ -15,12 +15,14 @@ export function isLogin (status) {
 }
 
 export function addUser (login,password) {
+  
   return{
     type:ADD_USER, login,password 
   }
 }
-export function activeUser (activeUser) {
+export function activeUser (userLogin,userPassword) {
+
   return{
-    type:ACTIVE_USER, activeUser
+    type:ACTIVE_USER, userLogin,userPassword
   }
 }

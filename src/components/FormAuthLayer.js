@@ -65,7 +65,7 @@ class FormAuthLayer extends React.Component {
 
     if(statusLogin){
       this.success()
-      this.toActiveUser(userLogin)
+      this.toActiveUser(userLogin,userPassword)
     }
     else{
       messageError=messageError.join(' ');
@@ -86,6 +86,7 @@ class FormAuthLayer extends React.Component {
     })
   }
   toAddUser(userLogin, userPassword){
+
     this.props.addUser(userLogin, userPassword )
   }
 
@@ -97,11 +98,8 @@ toCheckInStore(userLogin, userPassword){
   return statusLogin
 }
 
-  toActiveUser(userLogin){
-    const usersArr=this.props.stateApp.users;
-    let activeUser=usersArr.filter(item=>item.login==userLogin)[0];
-    console.log(activeUser)
-    this.props.checkActiveUser(activeUser)
+  toActiveUser(userLogin,userPassword){
+    this.props.checkActiveUser(userLogin,userPassword)
   }
 
   validate=(userLogin, userPassword)=>{
@@ -128,8 +126,8 @@ toCheckInStore(userLogin, userPassword){
   }
 
   render(){
-//   console.log('props--',this.props)
- //  console.log('props--',this.state)
+ console.log('props--',this.props)
+   console.log('state--',this.state)
 
  return(
   (this.props.loginStatus)
@@ -163,7 +161,7 @@ function mapStateToProps(state) {
 const mapDispatchToProps = (dispatch) => {
   return {
     addUser:(login,password)=>dispatch(addUser(login,password)),
-    checkActiveUser: (activeUserInfo)=>dispatch(activeUser(activeUserInfo)),
+    checkActiveUser: (userLogin,userPassword)=>dispatch(activeUser(userLogin,userPassword)),
   }
 }
 

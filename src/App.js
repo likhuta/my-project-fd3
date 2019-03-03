@@ -16,17 +16,6 @@ import Loader from './components/Loader'
 import {connect} from 'react-redux';
 import {getAxiosInfo} from './store/action/shopInfo'
 
-let routes=(
-  <Switch>
-      <Route path="/" exact component={Main} />
-      <Route path="/category/:name/:id"  component={Category } />
-      <Route path="/product/:name/:id" component={CardProduct} />
-      <Route path="/contact" component={Contact} />
-      <Route path="/personalCabinet" component={PersonalCabinet} />
-
-  </Switch>
-
-)
 class App extends React.Component {
   componentDidMount(){
     console.log('APP')
@@ -34,6 +23,33 @@ class App extends React.Component {
   }
 
   render() {
+    let routes=(
+  
+      <Switch>
+          <Route path="/" exact component={Main} />
+          <Route path="/category/:name/:id"  component={Category } />
+          <Route path="/product/:name/:id" component={CardProduct} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/personalCabinet" component={PersonalCabinet} />
+          <Redirect to="/" />
+    
+    
+      </Switch>
+    )
+    if (!this.props.stateApp.isLogin) {
+      routes = (
+        <Switch>
+        <Route path="/" exact component={Main} />
+          <Route path="/category/:name/:id"  component={Category } />
+          <Route path="/product/:name/:id" component={CardProduct} />
+          <Route path="/contact" component={Contact} />
+          <Redirect to="/" />
+        </Switch>
+      )
+    }
+    
+    
+    
     return (
    <Layout>
         <Header />
@@ -48,7 +64,9 @@ class App extends React.Component {
 
 function mapStateToProps(state) {
   return {
-   dataShop:state.dataShop
+   dataShop:state.dataShop,
+   stateApp:state.stateApp
+
   }
 }
 

@@ -17,13 +17,13 @@ let LoginBar =(props)=>{
     ?
     <div className={'LoginBar'} >
           <NavLink to="/personalCabinet"  activeClassName="ActivePageLink">
-            <input  type='button' value={`${props.loginActiveUser} cabinet `}/>  
+            <input  type='button' value={ 'cabinet' }/>  
           </NavLink>
       <input type='button'  value= 'Выход' onClick={props.onToggleLoginStatus} />
  
     </div>
     : <div className={stlCls.join(' ')}>
-    <input type='button'  value= {(props.loginStatus)?'Выход' :'Вход'}  onClick={()=>props.onToggle()}/>
+    <input type='button'  value= {'Вход'}  onClick={()=>props.onToggle()}/>
   </div>
   )
 }

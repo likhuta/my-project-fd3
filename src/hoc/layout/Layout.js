@@ -36,14 +36,14 @@ class Layout extends Component {
       <React.Fragment>
       
       <FormAuthLayer  onClose={this.formCloseHandler} isOpen={this.state.showForm} 
-          onToggleLoginStatus={this.toggleLoginStatus}  loginStatus={this.state.loginStatus} />
+          onToggleLoginStatus={this.toggleLoginStatus}  loginStatus={this.props.stateApp.isLogin} />
 
       <LoginBar onToggle={this.toggleFormHandler} isOpen={this.state.showForm}
-         loginStatus={this.state.loginStatus} onToggleLoginStatus={this.toggleLoginStatus} loginActiveUser={this.props.stateApp.activeUser.login} />
+         loginStatus={this.props.stateApp.isLogin} onToggleLoginStatus={this.toggleLoginStatus} 
+         />
         <main>
           { this.props.children }
         </main>
-
 
       </React.Fragment>
       

@@ -7,13 +7,16 @@ import {
 
 const initialState = {
   // isLogin:false,
-isLogin:true,
+isLogin:false,
 users:[
   {login:123, password:123,
      bascetProduct: [{categoryName:'computers', productId:21}]}
 ],
-activeUser:{login:123, password:123,
-   bascetProduct:[ {categoryName:'computers', productId:21}, {categoryName:'computers', productId:22} ]}
+activeUser:{ },
+
+  //  activeUser:{login:123, password:123,
+  //   bascetProduct:[ {categoryName:'computers', productId:21}, {categoryName:'computers', productId:22} ]}
+ 
 
 }
 
@@ -28,15 +31,16 @@ case IS_LOGIN:
  case ADD_USER: 
  return{
    ...state,
-   users:[...state.users, {login:action.login, password:action.password,  bascetProduct: {categoryName:'', productId:''} } ]
+   users:[...state.users, {login:action.login, password:action.password,  bascetProduct: {categoryName:'computers', productId:22} } ]
   }
   case ACTIVE_USER: 
   return{
     ...state,
-    activeUser:action.activeUser,
+    activeUser: {login:action.userLogin, password:action.userPassword,
+      bascetProduct: [{categoryName:'computers', productId:21}]},
   }
  
-
+ 
 default:
  return state
 }
