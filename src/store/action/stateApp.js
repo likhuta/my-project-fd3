@@ -1,7 +1,9 @@
 import {
   IS_LOGIN,
   ADD_USER,
-  ACTIVE_USER
+  ACTIVE_USER,
+  ADD_PRODUCT,
+  DELETE_PRODUCT
 } from './actionTypes'
 
 
@@ -24,5 +26,17 @@ export function activeUser (userLogin,userPassword) {
 
   return{
     type:ACTIVE_USER, userLogin,userPassword
+  }
+}
+export function addProduct (category, idProduct) {
+
+  return{
+    type:ADD_PRODUCT, category, idProduct
+  }
+}
+export function deleteProduct (index) {
+
+  return{
+    type:DELETE_PRODUCT, index
   }
 }

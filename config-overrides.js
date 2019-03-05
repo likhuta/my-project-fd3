@@ -9,7 +9,7 @@
   }),
  addLessLoader({
   javascriptEnabled: true,
-  modifyVars: { '@primary-color': '#eb2f96',
+  modifyVars: { '@primary-color': '#003a8c',
                 },
  }),
 );

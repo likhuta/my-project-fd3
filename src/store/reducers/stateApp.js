@@ -1,12 +1,13 @@
 import {
   IS_LOGIN,
   ADD_USER,
-  ACTIVE_USER
+  ACTIVE_USER,
+  ADD_PRODUCT,
+  DELETE_PRODUCT
 
 } from '../action/actionTypes'
 
 const initialState = {
-  // isLogin:false,
 isLogin:false,
 users:[
   {login:123, password:123,
@@ -16,8 +17,6 @@ activeUser:{ },
 
   //  activeUser:{login:123, password:123,
   //   bascetProduct:[ {categoryName:'computers', productId:21}, {categoryName:'computers', productId:22} ]}
- 
-
 }
 
 
@@ -39,8 +38,16 @@ case IS_LOGIN:
     activeUser: {login:action.userLogin, password:action.userPassword,
       bascetProduct: [{categoryName:'computers', productId:21}]},
   }
- 
- 
+  case ADD_PRODUCT: 
+  return{
+    ...state,
+    activeUser:{...state.activeUser,bascetProduct: [...state.activeUser.bascetProduct, {categoryName:action.category, productId:action.idProduct}]},
+  }
+  case DELETE_PRODUCT: 
+  return{
+    ...state,
+    activeUser:{...state.activeUser,bascetProduct:state.activeUser.bascetProduct.filter((item,index)=>index!=action.index) },
+  }
 default:
  return state
 }

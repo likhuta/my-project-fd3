@@ -2,3 +2,14 @@
   width: 200px;
   
 }
+.SearchField  .range_summ{
+  padding: 0 10px;
+  width: 90%;
+  
+  display: block;
+}
+
+.SearchField  .range_summ label{
+  display: block;
+
+}

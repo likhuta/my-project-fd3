@@ -6,9 +6,11 @@ import { Button , Icon} from 'antd';
 
 class Footer extends React.Component{
 
+
+
   render(){
     return (
-      <div className='Footer_conteiner'>
+      <div className='Footer'>
 
         <span> Реклама</span>
         <span> Размещение</span>
@@ -31,6 +33,7 @@ class Footer extends React.Component{
     <Icon type="check-circle" theme="twoTone" twoToneColor="#52c41a" />
   </div>
 
+        
 
       </div>
     )

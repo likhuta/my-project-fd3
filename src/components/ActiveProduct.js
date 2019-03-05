@@ -6,6 +6,8 @@ let ActiveProduct=(props)=>{
   console.log(props)
  let descriptionParam=Object.keys(props.descriptionProduct)
  console.log(descriptionParam)
+ 
+  
 
   let arrInfo=descriptionParam.map(item=>{
     return(
@@ -29,8 +31,19 @@ let ActiveProduct=(props)=>{
   </tbody>
 </table>
     <div>
-        <input type='button' value='Добавить' />
-        <input type='number' min='0' max='100' step='1' placeholder='шт' />
+        {/* <input type='number' min='0' max='100' step='1' placeholder='шт' /> */}
+
+        {
+          (props.isLogin)
+          ? <React.Fragment>
+              <input type='button' value='Удалить товар'  onClick={()=>props.deleteProductFromLoginUser( props.productId)} />
+              <input type='button' value='Добавить'  onClick={()=>props.addProductToLoginUser(props.categoryName, props.productId)} />
+
+           </React.Fragment>
+
+          : <input type='button' value='Добавить'  onClick={props.messagePleaseRegistr} />
+
+        }
     </div>
 
     </div>

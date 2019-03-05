@@ -19,9 +19,11 @@ export const  initState={
             'Материал':'пластик',
             'Вес':'162 г',
             'Ёмкость аккумулятора':'3 400 мА·ч',
-  
+          },
+          searchInfo:{
+            name:'Honor',
+            price:550,
           }
-
         },
         {
           id:12,
@@ -39,6 +41,10 @@ export const  initState={
             'Вес':'175 г',
             'Ёмкость аккумулятора':'4 100 мА·ч',
   
+          },
+          searchInfo:{
+            name:'Samsung',
+            price:2550,
           }
 
         },
@@ -69,6 +75,10 @@ export const  initState={
             'Запас энергии':'54 Вт·ч',
             'Цена':'2300 р.',
   
+          },
+          searchInfo:{
+            name:'Apple',
+            price:2300,
           }
 
 
@@ -92,6 +102,10 @@ export const  initState={
             'Запас энергии':'42 Вт·ч',
             'Цена':'2200 р.',
   
+          },
+          searchInfo:{
+            name:'ASUS',
+            price:2200,
           }
         },
       ]
@@ -115,7 +129,12 @@ export const  initState={
             'Ёмкость':'2 А•ч',
             'Цена':'360 р.',
   
+          },
+          searchInfo:{
+            name:'Bosch',
+            price:360,
           }
+
         },
         {
           id:32,
@@ -132,7 +151,12 @@ export const  initState={
             'Цена':'197 р.',
 
   
+          },
+          searchInfo:{
+            name:'Sarayli',
+            price:197,
           }
+
         },
         {
           id:33,
@@ -148,7 +172,12 @@ export const  initState={
             'Мощность':'780 Вт',
             'Цена':'294 р.',
   
+          },
+          searchInfo:{
+            name:'Makita',
+            price:294,
           }
+
         },
    
       ]
@@ -173,6 +202,11 @@ export const  initState={
             'Опрессовочное давление':'32 атм',
             'Цена':'175 р.',
           },
+          searchInfo:{
+            name:'Маргроид',
+            price:175,
+          }
+
      
         },
         {
@@ -192,7 +226,11 @@ export const  initState={
             'Ширина спального места ':'163 см',
             'Цена':'1299 р.',
           },
-     
+          searchInfo:{
+            name:'АМИ',
+            price:1299,
+          }
+
         },
       
       ]
@@ -215,7 +253,11 @@ export const  initState={
             'Мощность':'780 Вт',
             'Цена':'116 р.',
           },
-     
+          searchInfo:{
+            name:'Mirage',
+            price:116,
+          }
+
         },
         {
           id:52,
@@ -232,9 +274,14 @@ export const  initState={
             'Длина   ':'89 мм',
             'Ширина':'53 мм',
             'Вес':'86 г',
-            'Цена':'1299 р.',
+            'Цена':'320 р.',
           },
-     
+          searchInfo:{
+            name:'Neoline',
+            price:320,
+          }
+
+
         },
 
       ]
@@ -262,7 +309,11 @@ export const  initState={
 
             'Цена':'1199 р.',
           },
-     
+          searchInfo:{
+            name:'LTD',
+            price:1199,
+          }
+
         },
         {
           id:62,
@@ -276,7 +327,11 @@ export const  initState={
             'Цвет ':'желтый, синий',
             'Цена':'161 р.',
           },
-     
+          searchInfo:{
+            name:'Mikasa',
+            price:161,
+          }
+
         },
        
       ]

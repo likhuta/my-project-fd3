@@ -5,7 +5,9 @@ import {connect} from 'react-redux';
 import {addUser,activeUser} from '../store/action/stateApp'
 import FormUI from './FormUI'
 
-class FormAuthLayer extends React.Component {
+class FormAuthLayer extends React.PureComponent {
+
+
 
   state = {
     newUser:false,

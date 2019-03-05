@@ -1,4 +1,4 @@
-.Header_conteiner{
+.Header{
   background-color: gold;
   border: 1px solid silver;
   min-height: 15vh;
@@ -6,9 +6,15 @@
 
 
 }
-.title_name{
+.Header .banner_title_shop{
+  display: inline-block;
   font-size: 20px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: blue;
-  padding:0 20px; 
+  padding:0px 0px; 
+  border: 1px solid black;
+
+}
+.Header .banner_title_shop::first-letter{
+  color:red;
 }

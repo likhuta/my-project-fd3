@@ -21,17 +21,18 @@ class Header extends React.Component{
 
   render(){
     return (
-      <div className='Header_conteiner'>
-        <input type='button' value='Каталог' />
-        <input type='button' value='F.A.Q' />
-        <input type='button' value='SMTH' />
+      <div className='Header'>
+      
 
         <span> $</span>
         <span> Погода</span>
-        <span> Корзина</span>
+        <span> Корзина показать кол.</span>
         <br/>
           <NavLink to="/" exact className="PageLink" activeClassName="ActivePageLink">
-             <input type='button' value=' Upliner'  colot='yellow'/> 
+             <div className='banner_title_shop'>
+               {/* <span>U</span>  <span>p</span>  <span>l</span>  <i>i</i>  <i>n </i>   <i> e</i> <i> r</i> */}
+               Upliner
+                </div> 
           </NavLink>      
           
             <FindBar/>
