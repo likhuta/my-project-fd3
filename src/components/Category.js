@@ -33,7 +33,16 @@ class Category extends React.Component{
   toMakeRangeCategory=()=>{
     let categoryName=this.props.match.params.name;
     let storeCategory=this.props.dataShop.dataShop.category[categoryName].products;
-    let arrRange=storeCategory.map(item=>item.searchInfo.name);
+    let arrRange={}
+    storeCategory.forEach(item=>{
+      if(item.searchInfo.name in arrRange){
+          return
+      }
+      else{
+        arrRange[item.searchInfo.name]=true
+      }
+      });
+    arrRange=Object.keys(arrRange)
       return {arrRange, storeCategory}
 
   }
@@ -47,7 +56,7 @@ class Category extends React.Component{
   if(this.state.arrLimitPrice.length!==0){
     showArr=storeCategory.filter(item=>(this.state.arrLimitPrice[0]<item.searchInfo.price) && (item.searchInfo.price<this.state.arrLimitPrice[1]))
 
-    if(this.state.arrAvailableRange.length!=0){
+    if(this.state.arrAvailableRange.length!==0){
       showArr=showArr.filter(item=>{
         for(let v of this.state.arrAvailableRange){
           if(v==item.searchInfo.name)

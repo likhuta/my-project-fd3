@@ -13,9 +13,6 @@ let FormUI =(props)=>{
              onChange={(EO)=>{props.onChangeLoginInfo(EO.target.value, 'password')}}
            /> <br/> <br/> <hr/> 
 
-          <input type='button' value='Неправильный пароль/valid'  onClick={()=>props.checkLoginPassword('badTest') } />
-          <input type='button' value='Просто закрыть'  onClick={()=>{props.onClose();
-            props.onToggleLoginStatus();} } />
 
         {
           (props.newUser)

@@ -96,7 +96,7 @@ class Main extends React.Component{
     console.log(e)
   }
  */
-  /*
+  
      console.log('axios ')
 
     try {
@@ -110,7 +110,7 @@ class Main extends React.Component{
     catch (e){
       console.log(e)
     }
-*/
+
   }
 
   render(){
@@ -127,10 +127,6 @@ class Main extends React.Component{
     return (
       <div className='Main_conteiner'>
   
-
-          <NavLink to="/contact"  activeClassName="ActivePageLink">
-            <input  type='button' value='contact'/> 
-          </NavLink>
 
           <div className='Main__FlexContainer'>
             <div className='Main__FlexContainer__News'>

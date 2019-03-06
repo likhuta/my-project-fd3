@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "shopapp": "shopapp-upliner",
+    "default": "shopapp-upliner"
+  }
+}

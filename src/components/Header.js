@@ -24,9 +24,6 @@ class Header extends React.Component{
       <div className='Header'>
       
 
-        <span> $</span>
-        <span> Погода</span>
-        <span> Корзина показать кол.</span>
         <br/>
           <NavLink to="/" exact className="PageLink" activeClassName="ActivePageLink">
              <div className='banner_title_shop'>
@@ -35,7 +32,7 @@ class Header extends React.Component{
                 </div> 
           </NavLink>      
           
-            <FindBar/>
+    
      
         <br/>
         <HeaderCategory categories={totalCategories} />

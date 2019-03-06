@@ -29,11 +29,7 @@ class PersonalCabinet extends React.Component{
 
     return (
       <div className='PersonalCabinet'>
-        
-
-        <NavLink to="/" exact className="PageLink" activeClassName="ActivePageLink">
-           <input type='button' value='To main page' />
-        </NavLink>
+      
         <input type='button' value='Оформить заказ'   />
         
 

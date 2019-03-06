@@ -8,7 +8,7 @@
   max-width: 240px;
   padding: 20px 10px;
   box-sizing: border-box;
-  background: rgba(212, 22, 197, 0.8);
+  background: #b8c4cc;
   transform: translateX(240px);
   transition: transform   .18s ease-in;
 
