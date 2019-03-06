@@ -3,8 +3,8 @@ import './CardProduct.css';
 import ActiveProduct from './ActiveProduct'
 import {connect} from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import {addProduct, deleteProduct} from '../store/action/stateApp'
-
+import {addProduct, deleteProduct} from '../store/action/stateApp';
+import {  message, notification  } from 'antd'
 
 
 class CardProduct extends React.Component{
@@ -25,39 +25,35 @@ class CardProduct extends React.Component{
 
       const {isHaveProductInBasket}= this.findProductInBasket(productId)
       if(isHaveProductInBasket){
-              console.log('YES в корзине')
-
+        this.onMessageError('Уже есть в корзине')
       }
       else{
-                console.log('NO в корзине, добавлю')
-                this.props.addProduct(categoryName,productId)
+        this.onMessageSuccess('Продукт успешно добавлен в корзину')
+        this.props.addProduct(categoryName,productId)
       }
-      // let userBasket=this.props.stateApp.activeUser.bascetProduct; // [0,1]  product
-      // const isHaveProductInBasket=userBasket.some(item=>item.productId===parseInt(productId))
-      //   if(isHaveProductInBasket){
-      //     console.log('YES в корзине')
-      //   }
-      //   else{
-      //     console.log('NO в корзине')
-
-      //   }
   }
  
   deleteProductFromLoginUser=(productId)=>{
     const {isHaveProductInBasket, indexItem}= this.findProductInBasket(productId)
 
     if(isHaveProductInBasket){
-            console.log('YES в корзине,удаляю')
-            // activeUser:{...state.activeUser,bascetProduct:state.activeUser.bascetProduct.filter((item,index)=>index!=action.index) },
-
-            this.props.deleteProduct(indexItem )
+      this.onMessageSuccess('Продукт успешно удален')
+      this.props.deleteProduct(indexItem )
 
     }
     else{
-            console.log('NO в корзине, нечего удалять')
+      this.onMessageError('Продукт отсутствует в корзине')
     }
-
   }
+
+
+onMessageSuccess=(message)=>{
+  message.success(message);
+}
+
+onMessageError=(message)=>{
+  message.error(message);
+}
 
   messagePleaseRegistr(){
     console.log('PLEASE, REGISTRATE')
@@ -79,6 +75,18 @@ class CardProduct extends React.Component{
 
     return {isHaveProductInBasket, indexItem}
   }
+  omNotification=()=>{
+    notification.open({
+      message: 'Уважаемый посетитель!',
+      description: `Добавлять товар могут только зарегистрированные пользователию.
+       Выполните пожалуйста вход в личный кабинет,
+       или зарегистрируйтесь.`,
+      onClick: () => {
+        console.log('Notification Clicked!');
+      },
+    });
+
+  }
 
   render(){
     console.log('CardProduct----', this.props)
@@ -99,9 +107,13 @@ class CardProduct extends React.Component{
           <h2>
          { fullName}
           </h2>
-        <ActiveProduct descriptionProduct={descriptionProduct} addProductToLoginUser={this.addProductToLoginUser}
-        categoryName={categoryName} productId={productId} isLogin={this.props.stateApp.isLogin}
-         messagePleaseRegistr={this.messagePleaseRegistr}  deleteProductFromLoginUser={this.deleteProductFromLoginUser}
+        <ActiveProduct descriptionProduct={descriptionProduct}
+        addProductToLoginUser={this.addProductToLoginUser}
+         categoryName={categoryName} productId={productId} isLogin={this.props.stateApp.isLogin}
+         messagePleaseRegistr={this.messagePleaseRegistr} 
+         deleteProductFromLoginUser={this.deleteProductFromLoginUser}
+         onMessage={this.onMessageError} omNotification={this.omNotification}
+
         className='show_product' />
      
       </div>

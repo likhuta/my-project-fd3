@@ -42,7 +42,7 @@ export function getAxiosInfo () {
 
 
 export function categorySuccess (dataFromFirebase) {
-  console.log('good axiosSuccess')
+  console.log('good axiosSuccess--->', dataFromFirebase)
   return{
     type:GET_AXIOS_DATA_INFO, dataShop:dataFromFirebase
   }

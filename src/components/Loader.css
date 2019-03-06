@@ -1,6 +1,8 @@
 .center{
   text-align: center;
   background-color: lightpink;
+  height:70vh;
+  padding-top: 20%;
 }
 .Loader {
   display: inline-block;

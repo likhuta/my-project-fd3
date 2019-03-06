@@ -4,7 +4,6 @@ import ListProduct from './ListProduct'
 import {connect} from 'react-redux';
 import {activeProductId} from '../store/action/allCategory' 
 import SearchField from './SearchField'
-import { Card } from 'antd';
 
 
 class Category extends React.Component{

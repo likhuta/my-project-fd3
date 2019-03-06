@@ -1,57 +1,83 @@
 import React from 'react'
 import './ActiveProduct.css';
+import { Table, Popconfirm } from 'antd';
+
+const columns = [{
+  title: 'Характеристика',
+  dataIndex: 'param',
+  key: 'param',
+  width: '150px',
+
+}, {
+  title: 'Значение',
+  dataIndex: 'mean',
+  key: 'mean',
+  width: '150px',
+}, 
+];
 
 
 let ActiveProduct=(props)=>{
-  console.log(props)
- let descriptionParam=Object.keys(props.descriptionProduct)
- console.log(descriptionParam)
- 
-  
 
-  let arrInfo=descriptionParam.map(item=>{
-    return(
-  <tr key={item}>
-    <td>
-{item}
-    </td>
-    <td>
-    {props.descriptionProduct[item]}
-    </td>
-  </tr>
-    )
-  })
+  // console.log('ActiveProduct---',props)
+ let descriptionParam=Object.keys(props.descriptionProduct)
+//  console.log(descriptionParam)
+ 
+ let data=descriptionParam.map((item, index)=>{
+  return(
+{
+  key: index,
+  param:item ,
+  mean:props.descriptionProduct[item]
+}
+  )
+})
+
+// console.log(data)
+
 
   return(
-    <div className='ActiveProduct'>
+    <React.Fragment>
+      <div className='ActiveProduct'>
+        <div className='conteiner' >
+          <div className='table_info'>
+            <Table columns={columns} dataSource={data} pagination={false} width={'500px'}/>
+          </div>
+         <div className='img_block'>
+           <img src={ require ('../img/product/id' + props.productId+'.jpeg')}   alt='png'/> 
+         </div>
+       </div>
+       <div>
+         
+      {
+      (props.isLogin)
+      ? <React.Fragment>
+           <Popconfirm title="Удалить выбранный продукт из корзины" 
+             onConfirm={(productId)=>props.deleteProductFromLoginUser( props.productId  )} 
+              onCancel={( )=>props.onMessage('Отмена удаления' ) } 
+              okText="Yes" cancelText="No">
+              
+             <input type='button' value='Удалить товар'
+                />
+          </Popconfirm>
 
-<table>
-  <tbody>
-    {arrInfo}
-  </tbody>
-</table>
-    <div>
-        {/* <input type='number' min='0' max='100' step='1' placeholder='шт' /> */}
 
-        {
-          (props.isLogin)
-          ? <React.Fragment>
-              <input type='button' value='Удалить товар'  onClick={()=>props.deleteProductFromLoginUser( props.productId)} />
-              <input type='button' value='Добавить'  onClick={()=>props.addProductToLoginUser(props.categoryName, props.productId)} />
+          <input type='button' value='Добавить'
+            onClick={()=>props.addProductToLoginUser(props.categoryName, props.productId)}
+             />
 
-           </React.Fragment>
+        </React.Fragment>
 
-          : <input type='button' value='Добавить'  onClick={props.messagePleaseRegistr} />
+      : <input type='button' value='Добавить'  onClick={props.omNotification} />
 
-        }
-    </div>
-
-    </div>
-
-
+      }
+      </div>
+      </div>
+    </React.Fragment>
   )
 }
 
 export default  ActiveProduct
 
 
+ 

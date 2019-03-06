@@ -34,7 +34,7 @@ class PersonalCabinet extends React.Component{
         <NavLink to="/" exact className="PageLink" activeClassName="ActivePageLink">
            <input type='button' value='To main page' />
         </NavLink>
-        <input type='button' value='Удалить товар'  onClick={()=>this.props.addProduct()} />
+        <input type='button' value='Оформить заказ'   />
         
 
         <div className='blockProduct'>
