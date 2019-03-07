@@ -3,7 +3,9 @@
   color: black;
  
 }
-
+.ActiveProduct .Button {
+  margin: 0 5px;
+}
 
 
 .ActiveProduct .conteiner{

@@ -56,9 +56,8 @@ let ActiveProduct=(props)=>{
              onConfirm={(productId)=>props.deleteProductFromLoginUser( props.productId  )} 
               onCancel={( )=>props.onMessage('Отмена удаления' ) } 
               okText="Yes" cancelText="No">
-              <Button type="primary" >Удалить товар</Button>
+              <Button type="primary" className='Button' >Удалить товар   </Button>
 
-                />
           </Popconfirm>
 
           <Button type="primary"   onClick={()=>props.addProductToLoginUser(props.categoryName, props.productId)} >Добавить</Button>

@@ -75,7 +75,7 @@ class Main extends React.Component{
 
   render(){
     
- // this.sendToFirebase();
+  //this.sendToFirebase();
 
  
     let blockNewsArr=this.props.dataShop.blockNews.map( item=> <BlockNews key={item.id}
@@ -88,10 +88,10 @@ class Main extends React.Component{
       <div className='Main_conteiner'>
   
 
-          <div className='Main__FlexContainer'>
+       
             <div className='Main__FlexContainer__News'>
               {blockNewsArr}
-          </div>  </div> 
+          </div>  
 
          
       </div>

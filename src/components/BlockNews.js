@@ -12,7 +12,7 @@ let BlockNews =(props)=>{
   return(
 
       <NavLink to={"/category/"+props.category+'/'+props.id} className="PageLink" activeClassName="ActivePageLink">
-        <category className='BlockNews'>
+        <div className='BlockNews'>
         <div style= {{ backgroundImage: `url(${imageUrl})` }} 
            onClick={()=>props.onClick(props.category)}  > 
            <span>
@@ -21,7 +21,7 @@ let BlockNews =(props)=>{
         
 
           </div>
-        </category>
+        </div>
 
        
 

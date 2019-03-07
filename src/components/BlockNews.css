@@ -1,11 +1,11 @@
 .BlockNews div {
-  display:'flex';
-  align-items: 'center';
-  justify-content: 'center';
+
     text-align: center;
     background-repeat: no-repeat;
     background-size:cover;
     box-shadow: inset 0px 0px 277px 3px #313233cc;
+    -webkit-box-shadow: inset 0px 0px 277px 3px #313233cc;
+    -ms-box-shadow:inset 0px 0px 277px 3px #313233cc;
   
    
 }

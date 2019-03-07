@@ -10,7 +10,7 @@
   box-sizing: border-box;
   background: #b8c4cc;
   transform: translateX(240px);
-  transition: transform   .18s ease-in;
+  transition: transform   .22s ease-in;
 
   z-index: 90;
   opacity: 0.9;

@@ -1404,41 +1404,39 @@ export const  initState={
 
 export let blockNews=[
   {text:'Распродажа смартфонов!',
-    background:'magenta',
     category:'electronics',
-    className:'Main__FlexContainer__News',
     id:1
   },
   {text:'Отличный ноутбук ASUS VivoBook',
-  background:'blue',
   category:'computers',
-  className:'Main__FlexContainer__News',
   id:2
   },
 
   {text:'Пора уже повесить полочку!',
-  background:'aqua',
   category:'build',
-  className:'Main__FlexContainer__News',
   id:3
   },
+  
   {text:'С нами построить дом - легко!',
-  background:'lightsalmon',
   category:'house_gaden',
-  className:'Main__FlexContainer__News',
   id:4
   },
   {text:'Порадуй 4-ёх колесного друга!',
-  background:'palegreen',
   category:'car',
-  className:'Main__FlexContainer__News',
   id:5
   },
 
   {text:'Все для твоей первой пробежки!',
-  background:'darkviolet',
   category:'sport',
-  className:'Main__FlexContainer__News',
   id:6
   },
+  {text:'Еще тоньше, еще легче, еще мощнее!',
+  category:'computers',
+  id:222
+  },
+  {text:'Может поиграем во что-нибудь?',
+  category:'sport',
+  id:666
+  },
+
 ]

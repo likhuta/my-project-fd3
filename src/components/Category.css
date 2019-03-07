@@ -1,6 +1,6 @@
 .Category{
   background-color: lightcyan;
-  min-height: 70vh;
+  min-height: 75vh;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;

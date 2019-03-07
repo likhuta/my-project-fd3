@@ -4,10 +4,13 @@
 }
 
 
-
-
 .Footer{
   background-color: darkgray;
   min-height: 50px;
-  height: 15vh;
+  height: 10vh;
+}
+.Footer .icon{
+  font-size: 20px;
+  color:lightcyan;
+  display: inline;
 }
