@@ -1,6 +1,5 @@
 import React from 'react';
 import './PersonalCabinet.css';
-import { NavLink } from 'react-router-dom';
 import {connect} from 'react-redux';
 import ListProduct from './ListProduct'
 import {addProduct} from '../store/action/stateApp'
@@ -30,9 +29,7 @@ class PersonalCabinet extends React.Component{
     return (
       <div className='PersonalCabinet'>
       
-        <input type='button' value='Оформить заказ'   />
-        
-
+        {/* <input type='button' value='Оформить заказ'   /> */}
         <div className='blockProduct'>
              {arrProduct}
         </div>

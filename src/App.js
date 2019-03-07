@@ -8,7 +8,6 @@ import Layout from './hoc/layout/Layout'
 
 import Main from './components/Main';
 import Category from './components/Category';
-import Contact from './components/Contact';
 import PersonalCabinet from './components/PersonalCabinet';
 import CardProduct from './components/CardProduct';
 import fetch from 'isomorphic-fetch'
@@ -29,7 +28,6 @@ class App extends React.Component {
           <Route path="/" exact component={Main} />
           <Route path="/category/:name/:id"  component={Category } />
           <Route path="/product/:name/:id" component={CardProduct} />
-          <Route path="/contact" component={Contact} />
           <Route path="/personalCabinet" component={PersonalCabinet} />
           <Redirect to="/" />
     
@@ -42,7 +40,6 @@ class App extends React.Component {
         <Route path="/" exact component={Main} />
           <Route path="/category/:name/:id"  component={Category } />
           <Route path="/product/:name/:id" component={CardProduct} />
-          <Route path="/contact" component={Contact} />
           <Redirect to="/" />
         </Switch>
       )

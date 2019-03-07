@@ -1,6 +1,6 @@
 import React from 'react'
 import './ActiveProduct.css';
-import { Table, Popconfirm } from 'antd';
+import { Table, Popconfirm,Button } from 'antd';
 
 const columns = [{
   title: 'Характеристика',
@@ -56,19 +56,16 @@ let ActiveProduct=(props)=>{
              onConfirm={(productId)=>props.deleteProductFromLoginUser( props.productId  )} 
               onCancel={( )=>props.onMessage('Отмена удаления' ) } 
               okText="Yes" cancelText="No">
-              
-             <input type='button' value='Удалить товар'
+              <Button type="primary" >Удалить товар</Button>
+
                 />
           </Popconfirm>
 
-
-          <input type='button' value='Добавить'
-            onClick={()=>props.addProductToLoginUser(props.categoryName, props.productId)}
-             />
+          <Button type="primary"   onClick={()=>props.addProductToLoginUser(props.categoryName, props.productId)} >Добавить</Button>
 
         </React.Fragment>
+        :<Button type="primary" onClick={props.omNotification} >Добавить</Button>
 
-      : <input type='button' value='Добавить'  onClick={props.omNotification} />
 
       }
       </div>

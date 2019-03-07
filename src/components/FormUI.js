@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button } from 'antd';
 
 let FormUI =(props)=>{
   return(
@@ -18,17 +19,15 @@ let FormUI =(props)=>{
           (props.newUser)
           ?  
           <React.Fragment>
+          <Button type="primary" onClick={()=>props.checkLoginPassword() } >Войти</Button>
+          <Button type="primary"  onClick={props.checkLoginPassword } > Регистрация </Button>
+
          
-           <input type='button' value='Войти' onClick={()=>props.checkLoginPassword() } />
-           <input type='button' value='Регистрация'
-           onClick={props.checkLoginPassword }  />
           </React.Fragment>
           :     
             <React.Fragment>
-                <input type='button' value='Войти' onClick={()=>props.checkLoginPassword() } />
-            
-              <input type='button' value='Новый пользователь'   
-                 onClick={props.toggleRegistrUser} />
+              <Button type="primary" onClick={()=>props.checkLoginPassword() } >Войти</Button>
+              <Button type="primary"  onClick={props.toggleRegistrUser}> Новый пользователь </Button>
             </React.Fragment>
 
         }

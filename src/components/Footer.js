@@ -12,26 +12,9 @@ class Footer extends React.Component{
     return (
       <div className='Footer'>
 
-        <span> Реклама</span>
-        <span> Размещение</span>
-        <span> Реклама</span>
-        <span> Размещение</span>
 
         <input type='button'  value='VK' />
         <input type='button'  value='G' />
-
-   
-            <div className="App">
-              <Button type="primary" >Button</Button>
-            </div>
-
-
-
-  <div className="icons-list">
-    <Icon type="smile" theme="twoTone" />
-    <Icon type="heart" theme="twoTone" twoToneColor="#eb2f96" style={{ fontSize: '32px' }} />
-    <Icon type="check-circle" theme="twoTone" twoToneColor="#52c41a" />
-  </div>
 
         
 

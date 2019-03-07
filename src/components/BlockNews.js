@@ -1,17 +1,29 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import  './BlockNews.css'
+
 
 
 let BlockNews =(props)=>{
 
+  
+  const imageUrl = require(`../img/product/id${props.id}.jpeg`);
+
   return(
 
       <NavLink to={"/category/"+props.category+'/'+props.id} className="PageLink" activeClassName="ActivePageLink">
-      
-          <div style={{backgroundColor:`${props.background}` }} onClick={()=>props.onClick(props.category)} > 
-            {props.text} <br/>
-              id: {props.id}
+        <category className='BlockNews'>
+        <div style= {{ backgroundImage: `url(${imageUrl})` }} 
+           onClick={()=>props.onClick(props.category)}  > 
+           <span>
+           {props.text} <br/>
+           </span>
+        
+
           </div>
+        </category>
+
+       
 
       </NavLink>
 

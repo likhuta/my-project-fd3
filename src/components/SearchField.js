@@ -1,6 +1,7 @@
 import React from 'react';
 import './SearchField.css';
-import { Checkbox, Slider } from 'antd';
+import { Checkbox, Slider,Button } from 'antd';
+
 
 const marks = {
   0: '0$',
@@ -31,7 +32,7 @@ render(){
 
       </div>
 <br/>
-      <input type='button' value='Показать' onClick={this.props.toSortListCategory} />
+      <Button type="primary" onClick={this.props.toSortListCategory}>Показать</Button>
 
     
     </div>

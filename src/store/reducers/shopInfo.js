@@ -41,8 +41,8 @@ export const getAxiosInfo= (state=initialState, action)=> {
     case BLOCK_NEWS_SUCSSES:
     return{
       ...state,
-    //  blockNews:action.blockNews,
-     blockNews:blockNews,
+     blockNews:action.blockNews,
+    //  blockNews:blockNews,
     }
 
     default:

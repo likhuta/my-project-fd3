@@ -12,7 +12,7 @@
 
 
 .Main__FlexContainer__News div{
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   max-height: 35vh;
   max-width: 35vh;
   min-width: 15vh;
@@ -23,6 +23,7 @@
   font-size: 16px;
   font-weight: bold;
   color:black;
+  
 
 
 }
@@ -31,10 +32,10 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   width: 100%;
   justify-content: space-around;
-
+ 
 }
 
 

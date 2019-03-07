@@ -7,50 +7,10 @@ import {connect} from 'react-redux';
 import BlockNews from './BlockNews'
 import {checkCategory} from '../store/action/allCategory' 
 import {getAxiosInfo} from '../store/action/shopInfo'
- import {initState} from '../storeInfo'
+ import {initState, blockNews } from '../storeInfo'
 
 import axios from 'axios'
 
-let blockNews=[
-  {text:'Buy  electronics',
-    background:'magenta',
-    category:'electronics',
-    className:'Main__FlexContainer__News',
-    id:1
-  },
-  {text:'Buy  computers',
-  background:'blue',
-  category:'computers',
-  className:'Main__FlexContainer__News',
-  id:2
-  },
-
-  {text:'Buy  builder',
-  background:'aqua',
-  category:'build',
-  className:'Main__FlexContainer__News',
-  id:3
-  },
-  {text:'Buy  house_gaden',
-  background:'lightsalmon',
-  category:'house_gaden',
-  className:'Main__FlexContainer__News',
-  id:4
-  },
-  {text:'Buy  car',
-  background:'palegreen',
-  category:'car',
-  className:'Main__FlexContainer__News',
-  id:5
-  },
-
-  {text:'Buy  sport',
-  background:'darkviolet',
-  category:'sport',
-  className:'Main__FlexContainer__News',
-  id:6
-  },
-]
   
 
 
@@ -102,9 +62,9 @@ class Main extends React.Component{
     try {
 
     //  загрузить инф. о продуктах
-     const response =await  axios.post('https://shopapp-upliner.firebaseio.com/shopApp/category.json', initState)
+   //  const response =await  axios.post('https://shopapp-upliner.firebaseio.com/shopApp/category.json', initState)
     //  загрузить инф.  blockNews
-        //   const response =await  axios.post('https://shopapp-upliner.firebaseio.com/shopApp/blockNews.json', blockNews)
+          const response =await  axios.post('https://shopapp-upliner.firebaseio.com/shopApp/blockNews.json', blockNews)
       console.log(response.data)
     }
     catch (e){
@@ -131,7 +91,9 @@ class Main extends React.Component{
           <div className='Main__FlexContainer'>
             <div className='Main__FlexContainer__News'>
               {blockNewsArr}
-          </div>  </div> <hr/> <br/>
+          </div>  </div> 
+
+         
       </div>
     )
   }

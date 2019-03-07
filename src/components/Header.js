@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.css';
-import FindBar from './FindBar'
+
 import { NavLink } from 'react-router-dom';
 import HeaderCategory from './HeaderCategory'
 
@@ -23,19 +23,17 @@ class Header extends React.Component{
     return (
       <div className='Header'>
       
-
-        <br/>
           <NavLink to="/" exact className="PageLink" activeClassName="ActivePageLink">
              <div className='banner_title_shop'>
-               {/* <span>U</span>  <span>p</span>  <span>l</span>  <i>i</i>  <i>n </i>   <i> e</i> <i> r</i> */}
                Upliner
                 </div> 
-          </NavLink>      
+          </NavLink>    
+
           
-    
-     
-        <br/>
-        <HeaderCategory categories={totalCategories} />
+          <div className='HeaderCategory'>
+          <HeaderCategory  categories={totalCategories} />
+
+            </div>  
 
       </div>
     )
