@@ -105,7 +105,6 @@ toCheckInStore(userLogin, userPassword){
   }
 
   validate=(userLogin, userPassword)=>{
-    console.log('validate')
     let messageError=[]
     if(this.state.login.length<=2){
       messageError.push('Короткий LOGIN')
@@ -116,7 +115,7 @@ toCheckInStore(userLogin, userPassword){
     if(this.toCheckInStore(userLogin, userPassword)){
       messageError=['Такой пользователь уже существует']
     }
-    console.log(messageError)
+    // console.log(messageError)
 
     return messageError;
   }
@@ -128,8 +127,8 @@ toCheckInStore(userLogin, userPassword){
   }
 
   render(){
- console.log('props--',this.props)
-   console.log('state--',this.state)
+//  console.log('props--',this.props)
+//    console.log('state--',this.state)
 
  return(
   (this.props.loginStatus)

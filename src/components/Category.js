@@ -98,7 +98,7 @@ class Category extends React.Component{
   }
 
   render(){
-   console.log('Category from', this.props)
+  //  console.log('Category from', this.props)
     // console.log('Category STATE', this.state)
     let {arrRange,storeCategory }= this.toMakeRangeCategory();
 

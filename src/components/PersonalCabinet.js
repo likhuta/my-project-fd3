@@ -16,26 +16,22 @@ class PersonalCabinet extends React.Component{
       const itemProduct=storeProduct[categoryName].products.filter(item=>item.id===productId  )[0]
         return (
            <ListProduct item={itemProduct} key={categoryName+''+productId} checkCategoryName={categoryName} 
-                onActiveProductId={()=>console.log('PERSONAL CAB')}  /> 
+                /> 
         )
     })
     )
   }
 
   render(){
-    console.log(this.props)
+    // console.log(this.props)
     let arrProduct=this.findProductInStore();
 
     return (
       <div className='PersonalCabinet'>
       
-        {/* <input type='button' value='Оформить заказ'   /> */}
         <div className='blockProduct'>
              {arrProduct}
         </div>
-        
-
-
       </div>
     )
   }
@@ -45,7 +41,6 @@ class PersonalCabinet extends React.Component{
 function mapStateToProps(state) {
   return {
     chooseUser:state.chooseUser,
-   // checkCategoryName:state.checkCategoryName,
    stateApp:state.stateApp,
    dataShop:state.dataShop,
   }

@@ -26,7 +26,6 @@ class Layout extends Component {
     this.setState({
       loginStatus:!this.state.loginStatus,
     }, ()=>this.props.isLogin(this.state.loginStatus) )
-    //возможно  убрать isLogin
   }
   render() {
   // console.log('Layout---', this.props)

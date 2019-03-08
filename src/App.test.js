@@ -1,9 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { shallow } from 'enzyme';
+import toJson from 'enzyme-to-json'
+import Header from '../src/components/Header'
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+
+
+
+
+describe('Test HEADER', () => { 
+
+  it('with shallow HEADER', () => {
+    const wrapper = shallow(<Header />);
+    expect(toJson(wrapper)).toMatchSnapshot();
+
+
+  })
+
+
+})

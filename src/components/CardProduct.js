@@ -21,7 +21,7 @@ class CardProduct extends React.Component{
   }
 
   addProductToLoginUser=(categoryName,productId )=>{
-    console.log(this.props.stateApp.isLogin)
+    // console.log(this.props.stateApp.isLogin)
 
       const {isHaveProductInBasket}= this.findProductInBasket(productId)
       if(isHaveProductInBasket){
@@ -55,9 +55,6 @@ onMessageError=(message)=>{
   message.error(message);
 }
 
-  messagePleaseRegistr(){
-    console.log('PLEASE, REGISTRATE')
-  }
 
   findProductInBasket=(productId)=>{
       let indexItem=false;
@@ -71,7 +68,6 @@ onMessageError=(message)=>{
         }
         return false;
       });
-      console.log(indexItem)
 
     return {isHaveProductInBasket, indexItem}
   }
@@ -82,15 +78,14 @@ onMessageError=(message)=>{
        Выполните пожалуйста вход в личный кабинет,
        или зарегистрируйтесь.`,
       onClick: () => {
-        console.log('Notification Clicked!');
       },
     });
 
   }
 
   render(){
-    console.log('CardProduct----', this.props)
-    console.log('this.props.stateApp.isLogin ',this.props.stateApp.isLogin);
+    // console.log('CardProduct----', this.props)
+    // console.log('this.props.stateApp.isLogin ',this.props.stateApp.isLogin);
     let {descriptionProduct,fullName,categoryName, productId } =this.findProductForDetailInfo()
    
     return (
@@ -110,7 +105,6 @@ onMessageError=(message)=>{
         <ActiveProduct descriptionProduct={descriptionProduct}
         addProductToLoginUser={this.addProductToLoginUser}
          categoryName={categoryName} productId={productId} isLogin={this.props.stateApp.isLogin}
-         messagePleaseRegistr={this.messagePleaseRegistr} 
          deleteProductFromLoginUser={this.deleteProductFromLoginUser}
          onMessage={this.onMessageError} omNotification={this.omNotification}
 

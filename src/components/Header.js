@@ -3,6 +3,10 @@ import './Header.css';
 
 import { NavLink } from 'react-router-dom';
 import HeaderCategory from './HeaderCategory'
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter() });
 
 
 

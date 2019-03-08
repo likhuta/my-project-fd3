@@ -10,14 +10,13 @@ import Main from './components/Main';
 import Category from './components/Category';
 import PersonalCabinet from './components/PersonalCabinet';
 import CardProduct from './components/CardProduct';
-import fetch from 'isomorphic-fetch'
 import Loader from './components/Loader'
 import {connect} from 'react-redux';
 import {getAxiosInfo} from './store/action/shopInfo'
 
 class App extends React.Component {
   componentDidMount(){
-    console.log('APP')
+    // console.log('APP')
     this.props.getAxiosInfo()
   }
 

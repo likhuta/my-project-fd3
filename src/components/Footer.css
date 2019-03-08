@@ -8,6 +8,7 @@
   background-color: darkgray;
   min-height: 50px;
   height: 10vh;
+  min-width: 360px;
 }
 .Footer .icon{
   font-size: 20px;

@@ -8,7 +8,7 @@ import axios from 'axios'
 
 
 export function getAxiosInfo () {
-  console.log("начало  загрузки")
+  // console.log("начало  загрузки")
   return async dispatch=>{
     try{
       const response = await axios.get('https://shopapp-upliner.firebaseio.com/shopApp.json')
@@ -26,12 +26,11 @@ export function getAxiosInfo () {
         dispatch(blockNewsSuccess(blockNews))
       }
       })
-      console.log("here ")
       dispatch(isLoadingFalse())
 
     }
     catch(e){
-      console.log("error axiosError ")
+      // console.log("error axiosError ")
       console.log(e)
       dispatch(axiosError())
       dispatch(isLoadingFalse())
@@ -42,29 +41,21 @@ export function getAxiosInfo () {
 
 
 export function categorySuccess (dataFromFirebase) {
-  console.log('good axiosSuccess--->', dataFromFirebase)
+  // console.log('good axiosSuccess--->', dataFromFirebase)
   return{
     type:GET_AXIOS_DATA_INFO, dataShop:dataFromFirebase
   }
 }
 
 export function axiosError () {
-  console.log('bad')
+  // console.log('bad')
   return{
     type:AXIOS_ERROR, 
   }
 }
-/*
-export function blockNewsError () {
-  console.log('bad blockNewsError')
-  return{
-    type:BLOCK_NEWS_ERROR, 
-  }
-}
-*/
+
 
 export function blockNewsSuccess (blockNews) {
-  console.log('good blockNewsSuccess')
   return{
     type:BLOCK_NEWS_SUCSSES, blockNews
   }

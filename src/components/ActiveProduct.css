@@ -1,7 +1,7 @@
 .ActiveProduct {
   text-align: center;
   color: black;
- 
+  min-width: 360px;
 }
 .ActiveProduct .Button {
   margin: 0 5px;
@@ -44,4 +44,14 @@ padding: 5px 15px;
    }
   .ActiveProduct .img_block img:hover{
    transform:  scale(1.5,1.5)
+  }
+
+  @media (max-width: 440px) {
+  
+    .ActiveProduct .table_info table{
+      width:100%;
+      min-width: 320px; 
+      margin-right: 5px;
+    }
+  
   }

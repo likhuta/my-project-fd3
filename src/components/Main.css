@@ -1,6 +1,7 @@
 .Main_conteiner{
   background-color: lightskyblue;
   min-height: 75vh;
+  min-width: 360px;
 
 }
 
