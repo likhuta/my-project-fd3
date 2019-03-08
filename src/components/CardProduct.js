@@ -4,7 +4,7 @@ import ActiveProduct from './ActiveProduct'
 import {connect} from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import {addProduct, deleteProduct} from '../store/action/stateApp';
-import {  message, notification  } from 'antd'
+import {  message, notification,Button } from 'antd'
 
 
 class CardProduct extends React.Component{
@@ -74,7 +74,7 @@ onMessageError=(message)=>{
   omNotification=()=>{
     notification.open({
       message: 'Уважаемый посетитель!',
-      description: `Добавлять товар могут только зарегистрированные пользователию.
+      description: `Добавлять товар могут только зарегистрированные пользователи.
        Выполните пожалуйста вход в личный кабинет,
        или зарегистрируйтесь.`,
       onClick: () => {
@@ -94,7 +94,8 @@ onMessageError=(message)=>{
           (this.props.stateApp.isLogin)
           ?
           <NavLink to="/personalCabinet"  activeClassName="ActivePageLink">
-            <input  type='button' value='К списку товаров' />  
+
+          <Button type="primary" className='Button_allListProd' >К списку товаров  </Button>
             {/* {`${this.props.stateApp.activeUser.login} cabinet `} */}
           </NavLink>
           :null

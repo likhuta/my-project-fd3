@@ -1,7 +1,7 @@
 import React from 'react';
 import './LoginBar.css';
 import { NavLink } from 'react-router-dom';
-
+import {  Button } from 'antd'
 
 
 let LoginBar =(props)=>{
@@ -17,13 +17,15 @@ let LoginBar =(props)=>{
     ?
     <div className={'LoginBar'} >
           <NavLink to="/personalCabinet"  activeClassName="ActivePageLink">
-            <input  type='button' value={ 'cabinet' }/>  
+            <Button type="primary" className='Button' onClick={()=>props.onToggle()} >Кабинет </Button>
+
           </NavLink>
-      <input type='button'  value= 'Выход' onClick={props.onToggleLoginStatus} />
- 
+      <Button type="primary" className='Button_out' onClick={props.onToggleLoginStatus} >Выход </Button>
+
     </div>
     : <div className={stlCls.join(' ')}>
-    <input type='button'  value= {'Вход'}  onClick={()=>props.onToggle()}/>
+       <Button type="primary" className='Button' onClick={()=>props.onToggle()} >Вход </Button>
+
   </div>
   )
 }

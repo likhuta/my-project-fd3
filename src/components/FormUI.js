@@ -20,7 +20,7 @@ let FormUI =(props)=>{
           ?  
           <React.Fragment>
           <Button type="primary" onClick={()=>props.checkLoginPassword() } >Войти</Button>
-          <Button type="primary"  onClick={props.checkLoginPassword } > Регистрация </Button>
+          <Button type="primary"  onClick={props.checkLoginPassword } style={{marginLeft:'3px'}} > Регистрация </Button>
 
          
           </React.Fragment>

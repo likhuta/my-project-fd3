@@ -5,10 +5,7 @@
  
 
 }
-.CardProduct .show_product{
-  /* display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content:space-evenly; */
+.CardProduct .Button_allListProd{
+  margin: 2px;
 }
 

@@ -49,7 +49,7 @@ class Category extends React.Component{
 
   toSortListCategory=()=>{
     let showArr=[];
-    console.log('SORT')
+    // console.log('SORT')
     let categoryName=this.props.match.params.name;
     let storeCategory=this.props.dataShop.dataShop.category[categoryName].products;
 
@@ -147,7 +147,6 @@ const mapDispatchToProps = (dispatch) => {
 function mapStateToProps(state) {
   return {
     chooseUser:state.chooseUser,
-   // checkCategoryName:state.checkCategoryName,
    dataShop:state.dataShop
   }
 }

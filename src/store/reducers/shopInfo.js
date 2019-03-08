@@ -27,8 +27,8 @@ export const getAxiosInfo= (state=initialState, action)=> {
     case AXIOS_ERROR:
     return{
       ...state,
-      dataShop:{...initState},
-      blockNews:blockNews,
+      // dataShop:{...initState},
+      // blockNews:blockNews,
     //   dataShop:action.dataShop,
     //  blockNews:action.blockNews,
     }
